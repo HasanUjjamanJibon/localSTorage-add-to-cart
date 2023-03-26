@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Widget 3000",
+    "description": "The Widget 3000 is the latest and greatest in widget technology. With its sleek design and advanced features, you won't find a better widget on the market.",
+    "price": 49.99,
+    "inventory": 100,
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "category": "electronics"
+  },
+  {
+    "id": 2,
+    "name": "SuperSonic Hair Dryer",
+    "description": "The SuperSonic Hair Dryer is the fastest and most powerful hair dryer on the market. With its advanced technology, you can dry your hair in minutes without damaging it.",
+    "price": 149.99,
+    "inventory": 50,
+    "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+    "category": "beauty"
+  },
+  {
+    "id": 3,
+    "name": "Organic Protein Powder",
+    "description": "Our Organic Protein Powder is made from the highest quality ingredients, and is perfect for anyone looking to add more protein to their diet. With its great taste and high protein content, it's the perfect supplement for athletes and fitness enthusiasts.",
+    "price": 29.99,
+    "inventory": 200,
+    "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+    "category": "health"
+  },
+  {
+    "id": 4,
+    "name": "Smart Watch",
+    "description": "The Smart Watch is the ultimate accessory for anyone who wants to stay connected on the go. With its advanced features, you can track your fitness, check your email, and even make phone calls from your wrist.",
+    "price": 199.99,
+    "inventory": 75,
+    "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    "category": "electronics"
+  },
+  {
+    "id": 5,
+    "name": "Scented Candles",
+    "description": "Our Scented Candles are the perfect addition to any home. With their delightful scents and elegant design, they make a great gift for any occasion.",
+    "price": 19.99,
+    "inventory": 150,
+    "image": "https://www.luxuryformen.com/media/catalog/product/cache/fc49963b087eb4c20dab947be5959514/a/t/atelier_rebul_istanbul_scented_candle_950gr_1.jpg",
+    "category": "home"
+  },
+  {
+    "id": 6,
+    "name": "Gaming Mouse",
+    "description": "The Gaming Mouse is designed for serious gamers who demand the best performance. With its high precision sensors and customizable buttons, you can take your gaming to the next level.",
+    "price": 79.99,
+    "inventory": 100,
+    "image": "data:image/jpeg;base64,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",
+    "category": "electronics"
+  }
+]
