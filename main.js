@@ -1,5 +1,4 @@
 const cardSection = document.getElementById("card-section");
-let productsData = [];
 
 const loadData = async () => {
   const res = await fetch("./data.json");
@@ -18,7 +17,7 @@ const displayAllItem = (items) => {
       <h2 class="card-title">${category}</h2>
       <p>${description.slice(0, 150)}</p>
       <div class="card-actions justify-end">
-      <button onclick="removeCart('${id}')" class="btn btn-primary">Remove Cart</button>
+      <button onclick="removeCart('${id}', '${name}')" class="btn btn-primary">Remove Cart</button>
         <button onclick="addToCart('${id}', '${name}', '${price}' )" class="btn btn-primary">Add To Cart</button>
       </div>
     </div>
@@ -27,24 +26,24 @@ const displayAllItem = (items) => {
   });
 };
 
-// Product added
 const addToCart = (id, name, price) => {
-  const privousItem = JSON.parse(localStorage.getItem("products"));
+  const previousItem = JSON.parse(localStorage.getItem("products"));
+  let productsData = [];
   const product = {
     id,
     name,
     price,
     bookmark: true,
   };
-  if (privousItem) {
-    const isCartAdded = privousItem.find((pd) => pd.id == id);
-    if (isCartAdded) {
+  if (previousItem) {
+    const isCarted = previousItem.find((pd) => pd.id == id);
+    if (isCarted) {
       swal({
         icon: "error",
         title: `Already Added ${name}`,
       });
     } else {
-      productsData.push(product);
+      productsData.push(...previousItem, product);
       localStorage.setItem("products", JSON.stringify(productsData));
       swal({
         icon: "success",
@@ -62,11 +61,14 @@ const addToCart = (id, name, price) => {
 };
 
 // Product remove
-const removeCart = (id) => {
+const removeCart = (id, name) => {
   const previousItem = JSON.parse(localStorage.getItem("products"));
   const restOfItem = previousItem.filter((pd) => pd.id != id);
   localStorage.setItem("products", JSON.stringify(restOfItem));
-  console.log(restOfItem);
+  swal({
+    icon: "success",
+    title: `Successfully Removed ${name}`,
+  });
 };
 
 loadData();
